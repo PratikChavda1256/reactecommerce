@@ -1,8 +1,8 @@
-// Product.js (Component)
+
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getProducts } from '../../Actions/Product'; // Adjust the path as per your file structure
+import { getProducts } from '../../Actions/Product';
 import ProductCard from './ProductCart';
 import Loading from '../Loader/Loading';
 
@@ -12,15 +12,15 @@ const ProductPage = () => {
   const { products, loading, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(getProducts()); // Dispatch action to fetch products on component mount
+    dispatch(getProducts()); 
   }, [dispatch]);
 
   if (loading) {
-    return  <Loading/>// Show loading spinner while fetching data
+    return  <Loading/>
   }
 
   if (error) {
-    return <div>Error: {error}</div>; // Handle error state if fetch fails
+    return <div>Error: {error}</div>; 
   }
 
   return (

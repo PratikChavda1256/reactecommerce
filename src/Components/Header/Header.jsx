@@ -13,7 +13,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-gradient-to-r from-red-500 via-yellow-500 to-yellow-900 text-white py-4">
+        <header className="bg-gradient-to-r from-purple-400 to-pink-500 text-white py-4">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                 <Link to="/" className="flex items-center space-x-4">
                     <h1 className="text-2xl font-bold">Shop</h1>

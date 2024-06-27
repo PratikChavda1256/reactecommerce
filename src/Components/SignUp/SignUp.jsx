@@ -43,12 +43,12 @@ const SignUp = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <form className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md" onSubmit={handleSubmit}>
-                <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Sign Up</h2>
+        <div className="flex items-center justify-center min-h-screen">
+            <form className="bg-gray-700 p-8 rounded-lg shadow-lg w-full max-w-md" onSubmit={handleSubmit}>
+                <h2 className="text-3xl font-semibold text-white mb-6 text-center">Sign Up</h2>
                 {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
                 <div className="mb-4">
-                    <label htmlFor="username" className="block text-gray-700 mb-2">Username</label>
+                    <label htmlFor="username" className="block text-white mb-2">Username</label>
                     <input
                         type="text"
                         id="username"
@@ -60,7 +60,7 @@ const SignUp = () => {
                     {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-white mb-2">Email</label>
                     <input
                         type="email"
                         id="email"
@@ -72,7 +72,7 @@ const SignUp = () => {
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
                 <div className="mb-6">
-                    <label htmlFor="password" className="block text-gray-700 mb-2">Password</label>
+                    <label htmlFor="password" className="block text-white mb-2">Password</label>
                     <input
                         type="password"
                         id="password"
@@ -85,13 +85,13 @@ const SignUp = () => {
                 </div>
                 <button
                     type="submit"
-                    className={`w-full py-3 rounded-md font-semibold transition duration-300 ${loading ? 'bg-gray-400 text-gray-700 cursor-not-allowed' : 'bg-gradient-to-r from-red-500 to-yellow-500 text-white hover:from-red-600 hover:to-yellow-600 hover:bg-gradient-to-r'} disabled:opacity-50`}
+                    className={`w-full py-3 rounded-md font-semibold transition duration-300 ${loading ? 'bg-gray-400 text-gray-700 cursor-not-allowed' : 'bg-gradient-to-r from-purple-400 to-pink-500 text-white'} disabled:opacity-50`}
                     disabled={loading}
                     aria-label={loading ? 'Signing up...' : 'Sign Up'}
                 >
                     {loading ? 'Signing up...' : 'Sign Up'}
                 </button>
-                <p className="text-gray-700 mt-4 text-center">
+                <p className="text-white mt-4 text-center">
                     Already have an account?{' '}
                     <Link to="/login" className="text-blue-500 hover:underline">Login</Link>
                 </p>
